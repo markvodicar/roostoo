@@ -1,0 +1,38 @@
+{
+  "name": "core_short_overlay_hourly_soak",
+  "core": ["BTC", "ETH"],
+  "core_frac": 1.0,
+  "ema_span_h": 240,
+  "core_vol": 0.3,
+  "core_corr": 0.8,
+  "short_core": true,
+  "tilt": "none",
+  "tilt_params": {
+    "top_k": 3,
+    "short_k": 0,
+    "thresh": 0.0,
+    "short_thresh": 0.0,
+    "target_vol": 0.5,
+    "max_w": 0.35,
+    "rebal_h": 1,
+    "band": 0.05,
+    "gross_cap": 1.0,
+    "use_regime": false,
+    "head": 24
+  },
+  "models": [],
+  "universe": "crypto",
+  "risk": {
+    "dd_soft": 0.05,
+    "dd_hard": 0.10,
+    "min_scale": 0.30,
+    "window_h": 336
+  },
+  "execution": {
+    "limit_timeout_s": 180,
+    "order_gap_s": 61,
+    "poll_s": 5,
+    "min_trade_usd": 25.0,
+    "fee_buffer": 0.995
+  }
+}

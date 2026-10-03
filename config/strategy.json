@@ -1,0 +1,41 @@
+{
+  "name": "risk_parity_trend_btc_eth_paxg_always_active",
+  "kind": "risk_parity",
+  "risk_parity": {
+    "sleeves": [
+      "BTC",
+      "ETH",
+      "PAXG"
+    ],
+    "budgets": [
+      2.0,
+      2.0,
+      1.0
+    ],
+    "lookbacks": [
+      200
+    ],
+    "halflife": 30,
+    "target_vol": 0.2,
+    "band": 0.00025,
+    "min_obs": 60,
+    "trend_floor": 0.1,
+    "rebal_h": 4,
+    "force_daily_trade": true,
+    "max_gross": 0.98,
+    "min_trade_frac": 0.00025
+  },
+  "risk": {
+    "dd_soft": 0.99,
+    "dd_hard": 1.0,
+    "min_scale": 1.0,
+    "window_h": 336
+  },
+  "execution": {
+    "limit_timeout_s": 180,
+    "order_gap_s": 61,
+    "poll_s": 5,
+    "min_trade_usd": 25.0,
+    "fee_buffer": 0.995
+  }
+}
